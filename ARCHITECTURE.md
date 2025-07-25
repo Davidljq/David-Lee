@@ -5,7 +5,7 @@
 
 Below, sketch (ASCII, hand-drawn JPEG/PNG pasted in, or ASCII art) the high-level components of your agent.
 
-![Architectural Plan](images/Architecture file.png)
+![Architectural Plan](https://github.com/Davidljq/David-Lee/blob/main/images/Architecture%20file.png)
 
 
 
