@@ -5,6 +5,7 @@
 
 Below, sketch (ASCII, hand-drawn JPEG/PNG pasted in, or ASCII art) the high-level components of your agent.
 
+<img width="1996" height="1155" alt="Architecture file" src="https://github.com/user-attachments/assets/f2530d08-a652-480b-9ef1-67cb02d733ae" />
 
 
 
