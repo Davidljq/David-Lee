@@ -5,7 +5,8 @@
 
 Below, sketch (ASCII, hand-drawn JPEG/PNG pasted in, or ASCII art) the high-level components of your agent.
 
-![Architectural Plan](Architecture file.png)
+<img width="1996" height="1155" alt="Architecture file" src="Architecture file.png" />
+
 
 
 
