@@ -30,11 +30,18 @@ List each external tool or API and how you call it:
 
 Explain your logging and how judges can trace decisions:
 - Logs: Logging is done via print statements to console for simplicity. There are no separate logs/ directory — the script output shows step-by-step decisions in real time. For reproducibility, the results can be re-run by providing the same file or URL input.  
-- `TEST.py` exercises main path
+- Testing: Code fully tested in Colab.
 
 ## 5. Known Limitations
 
 Be honest about edge cases or performance bottlenecks:
-- Long-running API calls  
-- Handling of ambiguous user inputs  
-
+- Limited free API calls: May result in 429 Too Many Requests errors
+- Only checked against VirusTotal and a local script. Local script only matches simple regex patterns like eval( or os.system.
+- Local script won’t catch obfuscated code, encoded payloads, or sophisticated exploits.
+- Local script has no static analysis, sandboxing, or real malware scanning — it’s just basic pattern-matching
+- No multi-threading: Only scans a single URL or file to prevent 429 Too Many Requests Errors
+- No persistent memory: Writes output to console, if the script crashes, past results are gone
+- Does not sandbox suspicious codes, does not catch runtime behaviors, dropped files, or hidden malware
+- Basic URL checks, relies solely on VirusTotal
+- Minimal Error Handling: If VirusTotal or Gemini returns an unexpected JSON structure, the code might throw a KeyError or print fallback output
+- Runs in notebook mode: No GUI, no API server, no chatbot front-end.
