@@ -36,9 +36,15 @@ This tool demonstrates **agentic AI** principles:
 ---
 
 ## Folder Structure
+```plaintext
 project/
- ├── MalwareMate.ipynb          # Interactive notebook version
- ├── main.py             # (Optional) .py version if you convert
- ├── TEST.sh             # Test script to run headlessly
- ├── requirements.txt    # Dependencies
+ ├── ARCHITECHTURE.MD   # Flow of script
+ ├── Architecture file.png   # Diagram of the flow of the script
+ ├── DEMO.md   # Demo showing how it works and its limitations
+ ├── EXPLANATION.md   # Details of the script
+ ├── LICENSE   # Apache2 License Agreement as part of the ODSC Hackathon
+ ├── MalwareMate.ipynb   # Interactive notebook version
  ├── README.md           # This file!
+ ├── TEST.sh             # Test script
+ ├── requirements.txt    # Dependencies
+
