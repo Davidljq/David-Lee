@@ -3,29 +3,34 @@
 ## 1. Agent Workflow
 
 Describe step-by-step how your agent processes an input:
-1. Receive user input  
-2. (Optional) Retrieve relevant memory  
-3. Plan sub-tasks (e.g., using ReAct / BabyAGI pattern)  
-4. Call tools or APIs as needed  
-5. Summarize and return final output  
+1. Receive user input of API keys and 1 for file or 2 for websites  
+2. Checks file or website against VirusTotal
+3. If not suspicious, informs user that file or website is not suspicious
+4. If suspicious, give 1 line description from VirusTotal (how many engines detected suspicious activity)
+5. Calls Gemini AI to provide
 
 ## 2. Key Modules
 
-- **Planner** (`planner.py`): …  
-- **Executor** (`executor.py`): …  
-- **Memory Store** (`memory.py`): …  
+- **Planner** (`planner.py`): No planner required  
+- **Executor** (`executor.py`): No executor required  
+- **Memory Store** (`memory.py`): No memory store required
+- **User Interface**: Colab
+- **LLM used**: Gemini AI
+- **External Sites used**: https://www.virustotal.com/, https://aistudio.google.com/
 
 ## 3. Tool Integration
 
 List each external tool or API and how you call it:
-- **Search API**: function `search(query)`  
-- **Calculator**: LLM function calling  
+
+- VirusTotal API:	Checks if a URL is malicious or suspicious by sending the URL for scanning and retrieving the scan report.	Function: scan_url_virustotal(url, api_key)
+  
+- Gemini AI REST API:	Generates a user-friendly natural language explanation for why a file or URL is flagged as suspicious or malicious.	Function: call_gemini_rest_simple(target_label, api_key)
 
 ## 4. Observability & Testing
 
 Explain your logging and how judges can trace decisions:
-- Logs saved in `logs/` directory  
-- `TEST.sh` exercises main path  
+- Logs: Logging is done via print statements to console for simplicity. There are no separate logs/ directory — the script output shows step-by-step decisions in real time. For reproducibility, the results can be re-run by providing the same file or URL input.  
+- `TEST.py` exercises main path
 
 ## 5. Known Limitations
 
