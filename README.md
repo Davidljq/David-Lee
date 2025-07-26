@@ -1,7 +1,7 @@
 # MalwareMate, the malware checker
 
 A **minimal agentic AI** that scans files or websites for malicious content using **VirusTotal** and **Gemini AI**.  
-It combines **static code checks**, a **trusted threat intelligence API**, and a **friendly LLM explanation**, so anyone can understand if their file or URL is risky.
+It combines **static code checks**, a **trusted threat intelligence API**, and a **friendly LLM explanation**, so anyone can understand if a file or URL is suspicious.
 
 ---
 
@@ -38,13 +38,14 @@ This tool demonstrates **agentic AI** principles:
 ## Folder Structure
 ```plaintext
 project/
- ├── ARCHITECHTURE.MD   # Flow of script
+ src/
+  ├── MalwareMate.ipynb      # Interactive notebook version
+ ├── ARCHITECHTURE.MD        # Flow of script
  ├── Architecture file.png   # Diagram of the flow of the script
- ├── DEMO.md   # Demo showing how it works and its limitations
- ├── EXPLANATION.md   # Details of the script
- ├── LICENSE   # Apache2 License Agreement as part of the ODSC Hackathon
- ├── MalwareMate.ipynb   # Interactive notebook version
- ├── README.md           # This file!
- ├── TEST.sh             # Test script
- ├── requirements.txt    # Dependencies
+ ├── DEMO.md                 # Demo showing how it works and its limitations
+ ├── EXPLANATION.md          # Details of the script
+ ├── LICENSE                 # Apache2 License Agreement as part of the ODSC Hackathon
+ ├── README.md               # This file!
+ ├── TEST.sh                 # Test script
+ ├── requirements.txt        # Dependencies
 
